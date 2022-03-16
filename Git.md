@@ -437,9 +437,25 @@ Se o commit estiver com o problema, então ele deverá ser marcado como **ruim**
  	git bisect bad
  
 ##### Finalizar a pesquisa binária
+	
 Depois de encontrar o commit com problema, para retornar para o *HEAD* utilize:
 	
 	git bisect reset
+
+#### Você pode corrigir isso fazendo fetch e merge das alterações feitas no branch remote com as alterações que foram feitas localmente:
+	
+#### Faz fetch das atualizações feitas em um repositório online
+	
+	git fetch origin
+
+#### Faz merge de atualizações feitas online com seu trabalho local	
+	
+ 	git merge origin YOUR_BRANCH_NAME
+
+	
+#### Ou você pode simplesmente usar git pull para executar ambos os comandos de uma vez:
+	
+	git pull origin YOUR_BRANCH_NAME
  	
 
 # Contribuições
